@@ -1,0 +1,31 @@
+<ivysettings>
+
+	
+	<!--
+    <settings defaultResolver="chain"/>
+    <resolvers>
+        <chain name="chain">
+            <ibiblio name="central" m2compatible="false"/>
+            <ibiblio name="example" m2compatible="true" root="http://example.com/m2/"/>
+        </chain>
+    </resolvers>
+	-->
+	<property name="ibiblio-maven2-root" value="http://repo1.sonatype.net/maven2" override="false" />
+	<resolvers>
+		<!--  http://repo1.maven.org/maven2
+		
+		http://repo1.maven.org/maven2/
+		
+	    <filesystem name="my-repository">
+	        <ivy pattern="${dest.repo.dir}/advanced/[organisation]/[module]/ivys/ivy-[revision].xml"/>
+	        <artifact pattern="${dest.repo.dir}/advanced/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]"/>
+	    </filesystem>
+		-->
+		<ibiblio	name="libraries" 
+					root="${ibiblio-maven2-root}" 
+					m2compatible="true"
+					
+		/>
+	</resolvers>
+	
+</ivysettings>
